@@ -1,0 +1,225 @@
+/*Page entiere*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.lorem {
+    font-style: italic;
+    color: #AAA;
+}
+
+/*Menu ajout markers*/
+
+#addMarkerForm {
+    margin-top: 20px;
+    }
+
+#iconSelect {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.icon-preview {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-button {
+    padding: 8px 170px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/*Menu liste makers*/
+
+.category-link {
+    display: block;
+    padding: 0.5em;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: #333;
+}
+
+.category-link:hover {
+    background-color: #e6e6e6;
+}
+
+.category-count {
+    float: right;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+}
+
+.category {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+}
+
+.markers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.marker-item {
+padding: 0.25em;
+background-color: #f5f5f5;
+border-bottom: 1px solid #ddd;
+cursor: pointer;
+}
+
+.marker-item:hover {
+background-color: #f9f9f9;
+}
+
+/*Menu add chemin*/
+  
+.clear-button {
+    display: block;
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.mapPreview {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    height: 300px;
+}
+
+.geojson-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 98%;
+  }
+  
+  .geojson-link:hover {
+    background-color: #3e8e41;
+  }
+  
+  .geojson-link a {
+    color: white;
+    text-decoration: none;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 1em 0;
+  }
+
+/*Menu parametre*/
+  
+  #parametres h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #tailleIconForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #tailleIconForm label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #tailleIconForm input[type="number"] {
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #tailleIconForm button {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #tailleIconForm button:hover {
+    background-color: #45a049;
+  }
