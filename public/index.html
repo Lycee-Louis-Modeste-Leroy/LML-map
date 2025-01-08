@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Evreux-discover</title>
+    <!-- Inclure les fichiers de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Inclure les icons en CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- Inclure les fichiers OSMBuildings en CDN -->
+    <script src="https://cdn.osmbuildings.org/classic/0.2.2b/OSMBuildings-Leaflet.js"></script>
+    <!-- Inclure les fichiers du plugin Leaflet.locatecontrol en CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.css">
+    <!-- Inclure les fichiers du plugin Fullscreen en CDN -->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <!-- Inclure les fichiers du plugin Dialog en local -->
+    <script src="plugin/Leaflet.Dialog.js"></script>
+    <link rel="stylesheet" href="plugin/Leaflet.Dialog.css"/>
+    <!-- Inclure les fichiers du plugin SideBar en local -->
+    <script src="plugin/leaflet-sidebar.js"></script>
+    <link rel="stylesheet" href="plugin/leaflet-sidebar.css"/>
+    <!-- Inclure le fichier principale -->
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Navigations tabs -->
+        <div class="sidebar-tabs">
+          <ul role="tablist">
+            <li><a href="#markers" role="tab"><i class="fa fa-map-marker"></i></a></li>
+            <li><a href="#parametres" role="tab"><i class="fa fa-cog"></i></a></li>
+            <li><a href="#credits" role="tab"><i class="fa fa-info"></i></a></li>
+          </ul>
+        </div>
+    
+        <!-- Tab sidebar pour plugin -->
+        <div class="sidebar-content">
+          <div class="sidebar-pane" id="markers"></div>
+
+          <div class="sidebar-pane" id="parametres">
+            <h1 class="sidebar-header">parametres<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <form id="tailleIconForm">
+              <label for="tailleIconInput">Taille de l'icône (8 - 128) :</label>
+              <input type="number" id="tailleIconInput" name="tailleIcon" min="8" max="128" value="18">
+              <button type="submit" id="tailleIconApply">Appliquer</button>
+            </form>
+          </div>
+    
+          <div class="sidebar-pane" id="credits">
+            <h1 class="sidebar-header">Crédits<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <h2 style="text-align: center;"><strong>Projet carte interactive du lycée Louis Modest Leroy</strong></h2>
+            <h2 style="text-align: center;"><em><strong>~-~</strong></em><em><strong>Créer par</strong></em><em><strong>~-~</strong></em></h2>
+            <ul>
+            <li><strong>A. Cédric / </strong><em>&nbsp;carte interactive - intégrations des plugins - sidebar - recherches</em></li>
+            <h2 style="text-align: center;"><em><strong>~-~Sources~-~</strong></em></h2>
+            <h3><strong>Origine:</strong></h3>
+            <ul>
+            <li>En mémoire du projet Évreux discover developpé pour les trophés NSI de 1ére par A. Cédric, C.Thomas, R.Julien, T.Louis avec le soutien de M Betton, M Maillard, E.Victor<em>&nbsp;</em></li>
+            <li><a title="Evreux-discover site web" href="https://cedr0u.github.io/site-evreux-discover/public/">Evreux-discover site web</a></li>
+            <li><a title="Evreux-discover code source" href="https://github.com/cedr0u/evreux-discover">Evreux-discover code source</a></li>
+            </ul>
+            <h3><strong>Icons:</strong></h3>
+            <ul>
+            <li><a title="font-awesome 4.7.0" href="https://fontawesome.com/v4/">font-awesome</a></li>
+            <li><a title="monument icons" href="https://www.flaticon.com/fr/icone-gratuite/hieroglyphe_7416941">Monument icons created by Eucalyp - Flaticon</a></li>
+            <li><a title="sport icons" href="https://www.flaticon.com/free-icons/sport">Sport icons created by Freepik - Flaticon</a></li>
+            <li><a title="place icons" href="https://www.flaticon.com/free-icons/place">Place icons created by Freepik - Flaticon</a></li>
+            <li><a title="open sidebar icons" href="https://www.jeffreydegroot.com/">Open sidebar created by jeffrey de groot</a></li>
+            <li><a title="location pin icons" href="https://www.flaticon.com/free-icons/location-pin">Location pin icons created by Iconpro86 - Flaticon</a></li>
+            <li><a title="location icons" href="https://www.flaticon.com/free-icons/location">Location icons created by adrianadam - Flaticon</a></li>
+            <li><a title="WC icons" href="https://www.flaticon.com/fr/icone-gratuite/papier-toilette_1390953">WC icons created by Freepik - Flaticon</a></li>
+            <li><a title="3d icons" href="https://www.flaticon.com/fr/icone-gratuite/la-modelisation_3908215">la-modelisation icons created by Freepik - Flaticon</a></li>
+            </ul>
+            <h3><strong>Plugins:</strong></h3>
+            <ul>
+            <li><a title="Leaflet.Dialog" href="https://github.com/NBTSolutions/Leaflet.Dialog">Leaflet.Dialog</a></li>
+            <li><a title="leaflet-sidebar" href="https://github.com/noerw/leaflet-sidebar-v2">leaflet-sidebar</a></li>
+            <li><a title="leaflet.fullscreen" href="https://github.com/Leaflet/Leaflet.fullscreen">leaflet.fullscreen</a></li>
+            <li><a title="leaflet-locatecontrol" href="https://github.com/domoritz/leaflet-locatecontrol">leaflet-locatecontrol</a></li>
+            <li><a title="OSMBuildings-Leaflet" href="https://github.com/kekscom/osmbuildings/">OSMBuildings-Leaflet</a></li>
+            </ul>
+            <h3><strong>Base:</strong></h3>
+            <ul>
+            <li><a title="leaflet.js 1.9.4" href="https://leafletjs.com/">leaflet.js</a></li>
+            <li><a title="Express.js" href="https://expressjs.com/fr/">Express.js</a></li>
+            <li><a title="Node.js" href="https://nodejs.org/">leaflet.js</a></li>
+            </ul>
+            <h3><strong>Font:</strong></h3>
+            <ul>
+            <li><a title="font-awesome 4.7.0" href="https://fontawesome.com/v4/">font-awesome</a></li>
+            </ul>
+            <h3><strong>Modelisation 3d (Gaussian Splatting):</strong></h3>
+            <ul>
+            <li><a title="Gaussian Splatting Optimizer, Institut national de recherche en sciences et technologies du numérique (INRIA)" href="https://github.com/graphdeco-inria/gaussian-splatting">Gaussian Splatting Optimizer, Institut national de recherche en sciences et technologies du numérique (INRIA)</a></li>
+            <li><a title="Jawset Postshot" href="https://www.jawset.com/">Jawset Postshot</a></li>
+            <li><a title="spline" href="https://spline.design/download">spline</a></li>
+            </ul>
+            <h3><strong>Code source:</strong></h3>
+            <ul>
+            <li><a title="github (code du projet)" href="https://github.com/cedr0u/Modest-Leroy-Map">github (code du projet)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="map" class="sidebar-map" style="height: 100vh;"></div>
+</body>
+</html>

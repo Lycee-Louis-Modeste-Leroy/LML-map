@@ -1,0 +1,107 @@
+/*Page entiere*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.lorem {
+    font-style: italic;
+    color: #AAA;
+}
+
+/*Menu liste makers*/
+
+.category-link {
+    display: block;
+    padding: 0.5em;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: #333;
+}
+
+.category-link:hover {
+    background-color: #e6e6e6;
+}
+
+.category-count {
+    float: right;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+}
+
+.category {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+}
+
+.markers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.marker-item {
+padding: 0.25em;
+background-color: #f5f5f5;
+border-bottom: 1px solid #ddd;
+cursor: pointer;
+}
+
+.marker-item:hover {
+background-color: #f9f9f9;
+}
+
+/*Menu parametre*/
+  
+  #parametres h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #tailleIconForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #tailleIconForm label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #tailleIconForm input[type="number"] {
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #tailleIconForm button {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #tailleIconForm button:hover {
+    background-color: #45a049;
+  }

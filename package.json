@@ -1,0 +1,25 @@
+{
+  "name": "modest-leroy-map",
+  "version": "0.0.1",
+  "description": "carte interactive pour le lycee Louis Modest Leroy, par Cedric.A, 2025",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedr0u/Modest-Leroy-Map.git"
+  },
+  "author": "cedr0u (cedric.A)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedr0u/Modest-Leroy-Map/issues"
+  },
+  "homepage": "https://github.com/cedr0u/Modest-Leroy-Map#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
