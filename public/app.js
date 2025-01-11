@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Ajout de la couche OSMBuildings
-    var osmb = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
+    var osmb = new OSMBuildings().load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
 
     //----------------Markers/Points sur la carte et données d'informations------------------
     // création d'un groupes de marqueurs
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'cantine'
+            dataName: 'foyer'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info foyer ici</a>').openPopup();    
     
