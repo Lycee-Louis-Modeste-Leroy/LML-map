@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "OpenTopoMap": otp,
     };
 
+    // droit d'auteur
+    map.attributionControl.setPrefix(false);
+    map.attributionControl.addAttribution('Tous droits réservés Cédric.A 2025');
+
     // création de la couche des toponymes
     var toponymes = new L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.{ext}?api_key=7941eff7-366c-48c1-a60d-cf353be4aa97', {
         minZoom: 0,
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const tailleIconInput = document.getElementById('tailleIconInput');
-    const tailleIcon = getUrlParameter('tailleIcon') || 18;
+    const tailleIcon = getUrlParameter('tailleIcon') || 30;
     tailleIconInput.value = tailleIcon;
 
     document.getElementById('tailleIconForm').addEventListener('submit', function(event) {
@@ -57,53 +61,149 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = url;
     });
 
+    //----------------Catégories de données------------------
     // création/initialisation des tableaux de marqueurs par catégorie
+    var BatimentsPolygons = [];
+    var SallesImportante = [];
+    var info = [];
+    var sport = [];
+    var sportPolygons = [];
+    var toilettes = [];
+    var lieuxNotables = [];
     var lieux3D = [];
-    var infoPlace = [];
-    var sportPlace = [];
-    var toilettesPlace = [];
+    // catégorie pour debug
     var markersPersonnels = [];
+    var markersPersonnelsPolygons = [];
 
-    // Ajout des marqueurs avec les popups et liens
-    // -markers de lieux 3D-
-    lieux3D.push(L.marker([49.02475043512676, 1.1662588992127314], {dataName: '3D Usine Nétreville Philips (tunnel)'}).bindPopup('<a href="gaussian_splatting/urbex_usine_netreville/tunnel/index.html">3D Usine Nétreville Philips (tunnel)</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieux3D.push(L.marker([49.0253145910712, 1.1656430126264936], {dataName: '3D Usine Nétreville Philips (chemin)'}).bindPopup('<a href="gaussian_splatting/urbex_usine_netreville/chemin/index.html">3D Usine Nétreville Philips (chemin)</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieux3D.push(L.marker([49.02646565678856, 1.1512659263095817], {dataName: '3D Place de la mairie et théatre'}).bindPopup('<a href="gaussian_splatting/mairie/place/index.html">3D Place de la mairie et théatre</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
+    //----------------Ajout des données (marqueurs/polygones avec les popups et liens)------------------
+    // -markers de Batiments "Polygones"-
+    var bat1 = L.polygon(
+        [
+            [49.025, 1.150],
+            [49.026, 1.152],
+            [49.027, 1.151],
+            [49.025, 1.150]
+        ],
+        {
+            color: "#ff0000",
+            fillColor: "#ff6666",
+            fillOpacity: 0.4,
+            weight: 2,
+            dataName: 'Batiment 1'
+        }
+    ).bindPopup('<a href="lien_vers_la_page.html">info bat 1 ici</a>').openPopup();
+
+   BatimentsPolygons.push(bat1);
+
+    // -markers de Salles Importante-
+    SallesImportante.push(L.marker([49.02373449920583, 1.1493495595137675], {dataName: 'Salle '}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Lieux d'information-
-    infoPlace.push(L.marker([49.02373449920583, 1.1493495595137675], {dataName: 'Office du tourisme evreux'}).bindPopup('<a href="http://www.lecomptoirdesloisirs-evreux.fr/">Office du tourisme evreux</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
+    info.push(L.marker([49.02373449920583, 1.146], {dataName: 'Accueil'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
 
-    // -markers de Sports/J.O 2024-
-    sportPlace.push(L.marker([49.0221629331427, 1.1273308731985334], {dataName: 'Piscine Jean Bouin'}).bindPopup('<a href="../../presentation/presa+sport/lieux_sport.html">Piscine Jean Bouin</a>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
-    
-    // -markers de Toilettes publiques-
-    toilettesPlace.push(L.marker([49.020380367794814, 1.1493014814471363], {dataName: 'Toilettes public jardin public'}).bindPopup('<a href="#">Toilettes public jardin public</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    // -markers de sport-
+    sport.push(L.marker([49.02373449920583, 1.151], {dataName: 'Terrain de basket extérieur'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
+
+    // -markers de sport "Polygones"-
+    var PisteAthletisme = L.polygon(
+        [
+            [49.045, 1.140],
+            [49.046, 1.142],
+            [49.047, 1.141],
+            [49.045, 1.140]
+        ],
+        {
+            color: "#ff0000",
+            fillColor: "#ff6666",
+            fillOpacity: 0.4,
+            weight: 2,
+            dataName: 'piste athlétisme'
+        }
+    ).bindPopup('<a href="lien_vers_la_page.html">info piste athlétisme ici</a>').openPopup();
+
+    var TerrainRugby = L.polygon(
+        [
+            [49.035, 1.130],
+            [49.036, 1.132],
+            [49.037, 1.131],
+            [49.035, 1.130]
+        ],
+        {
+            color: "#ff0000",
+            fillColor: "#ff6666",
+            fillOpacity: 0.4,
+            weight: 2,
+            dataName: 'Terrain de rugby'
+        }
+    ).bindPopup('<a href="lien_vers_la_page.html">info Terrain de rugby ici</a>').openPopup();
+
+   sportPolygons.push(PisteAthletisme, TerrainRugby);
+
+    // -markers de toilettes-
+    toilettes.push(L.marker([49.02373449920583, 1.151], {dataName: 'Toilettes hall (en travaux)'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+
+    // -markers de lieux Notables-
+    lieuxNotables.push(L.marker([49.02373449920583, 1.151], {dataName: 'Buisson de la photo de classe'}).bindPopup('<a href="https://urlicilaaaa">lieu emblématique du lycée qui nous montre sa beauté une fois par an</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+
+    // -markers de lieux 3D-
+    lieux3D.push(L.marker([49.02373449920583, 1.151], {dataName: 'vue 3d du hall (c est un exemple !)'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Markers personnels- (pour debug c'est ici en gros)
+    markersPersonnels.push(L.marker([49.024, 1.150], {dataName: 'debug point'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/location_point.png', iconSize: [tailleIcon, tailleIcon]})));
 
+    // -markers de markers Personnels "Polygones"- (pour debug c'est ici aussi)
+    var debugpolygon1 = L.polygon(
+        [
+            [49.025, 1.150],
+            [49.026, 1.152],
+            [49.027, 1.151],
+            [49.025, 1.150]
+        ],
+        {
+            color: "#ff0000",
+            fillColor: "#ff6666",
+            fillOpacity: 0.4,
+            weight: 2,
+            dataName: 'Polygone debug' // Ajout du nom
+        }
+    ).bindPopup('<a href="lien_vers_la_page.html">polygon de debug</a>').openPopup();
+
+    markersPersonnelsPolygons.push(debugpolygon1);
+
+    //----------------Groupe reliés aux sous groupe de markers et polygones------------------
     // création des groupes de couches à partir des tableaux de marqueurs (ajouter ici si ajout de catégories de markers !)
-    var lieux3DLayer = L.layerGroup(lieux3D);
-    var infoPlaceLayer = L.layerGroup(infoPlace);
-    var sportPlaceLayer = L.layerGroup(sportPlace);
-    var toilettesPlaceLayer = L.layerGroup(toilettesPlace);
-    var markersPersonnelsLayer = L.layerGroup(markersPersonnels);
+    var BatimentsLayer = L.layerGroup([...BatimentsPolygons]);
+    var SallesImportanteLayer = L.layerGroup([...SallesImportante]);
+    var infoLayer = L.layerGroup([...info]);
+    var sportLayer = L.layerGroup([...sport, ...sportPolygons]);
+    var toilettesLayer = L.layerGroup([...toilettes]);
+    var lieuxNotablesLayer = L.layerGroup([...lieuxNotables]);
+    var lieux3DLayer = L.layerGroup([...lieux3D]);
+    //debug layer
+    var markersPersonnelsLayer = L.layerGroup([...markersPersonnels, ...markersPersonnelsPolygons]);
 
     // ajout des groupes de couches à overlayMaps
     var overlayMaps = {
         "<span style='color: DarkSlateGray'>Batiments 3d</span>": osmb,
         "<span style='color: olive'>Toponymes</span>": toponymes,
-        "Lieux d'information" : infoPlaceLayer,
-        "Sports" : sportPlaceLayer,
-        "Toilettes publiques" : toilettesPlaceLayer,
-        "Lieux 3D" : lieux3DLayer,
-        "Markers personnels" : markersPersonnelsLayer,
+        "Batiments": BatimentsLayer,
+        "Salles importantes": SallesImportanteLayer,
+        "Lieux d'informations": infoLayer,
+        "Sports": sportLayer,
+        "Toilettes": toilettesLayer,
+        "Lieux notables": lieuxNotablesLayer,
+        "Lieux 3D": lieux3DLayer,
+        //debug
+        "(debug)": markersPersonnelsLayer,
     };
     // affichage de tout les markers de base
-    map.addLayer(lieux3DLayer);
-    map.addLayer(infoPlaceLayer);
-    map.addLayer(sportPlaceLayer);
-    map.addLayer(toilettesPlaceLayer);
-    map.addLayer(markersPersonnelsLayer);
+    map.addLayer(BatimentsLayer);
+    map.addLayer(SallesImportanteLayer);
+    map.addLayer(infoLayer);
+    map.addLayer(sportLayer);
+    map.addLayer(toilettesLayer);
+    map.addLayer(lieuxNotablesLayer);
+    map.addLayer(lieux3DLayer)
 
     // ajouts des groupes de marqueurs à la carte
     map.addLayer(markers);
@@ -135,57 +235,132 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }));
 
-    //----------------Plugin localisation------------------
-    // création d'un contrôle de localisation
-    var lc = L.control.locate({
-        position: 'topleft', // Position du contrôle
-        strings: {
-            title: 'Localiser ma position' // Texte du titre
-        },
-        drawCircle: true, // Dessiner un cercle autour de la position
-        drawMarker: true, // Dessiner un marqueur à la position
-        follow: true, // Suivre la position de l'utilisateur
-        setView: 'untilPanOrZoom', // Centrer la carte sur la position
-        keepCurrentZoomLevel: false, // Ne pas conserver le niveau de zoom actuel
-        stopFollowingOnDrag: false, // Ne pas arrêter le suivi lors du glissement de la carte
-        metric: true, // Utiliser les unités métriques
-        icon: 'fa fa-location-arrow', // Icône personnalisée
-        iconLoading: 'fa fa-spinner fa-spin', // Icône de chargement
-        circleStyle: { // Style du cercle
-            color: '#136AEC',
-            fillColor: '#136AEC',
-            fillOpacity: 0.2,
-            weight: 1
-        },
-        markerStyle: { // Style du marqueur
-            color: '#136AEC',
-            fillColor: '#136AEC',
-            fillOpacity: 0.8,
-            weight: 1
-        },
-        followCircleStyle: { // Style du cercle lors du suivi
-            color: '#136AEC',
-            fillColor: '#136AEC',
-            fillOpacity: 0.4,
-            weight: 1
-        },
-        followMarkerStyle: { // Style du marqueur lors du suivi
-            color: '#136AEC',
-            fillColor: '#136AEC',
-            fillOpacity: 0.8,
-            weight: 1
-        },
-        circlePadding: [0, 0], // Espacement autour du cercle
-        locateOptions: { // Options de localisation
-            enableHighAccuracy: true, // Activer la haute précision
-            maximumAge: 0, // Ne pas utiliser de position mise en cache
-            timeout: 10000 // Délai d'attente de 10 secondes
-        }
+    //----------------Plugin localisation + Notifications------------------
+    // Initialisation des notifications
+    var notification = L.control
+    .notifications({
+        timeout: 5000, // Durée d'affichage par défaut
+        position: 'topright', // Position des notifications
+        closable: true, // Permettre de fermer manuellement
+        dismissable: true, // Permet de cliquer pour fermer
     }).addTo(map);
 
-    // Démarrez la localisation automatiquement lors du chargement de la page
-    lc.start();
+    // Liste pour suivre les notifications actives
+    var activeNotifications = [];
 
+    // Fonction pour afficher une notification personnalisée
+    function showNotification(type, title, message) {
+    // Créer une clé unique basée sur le contenu du titre et du message
+    var notificationKey = title + message;
+
+    // Vérifier si la notification est déjà active (en doublon)
+    if (activeNotifications.includes(notificationKey)) {
+        return; // Ne pas afficher la notification si elle est déjà présente
+    }
+
+    // Ajouter la notification à la liste des notifications actives
+    activeNotifications.push(notificationKey);
+
+    // Afficher la notification
+    switch (type) {
+        case 'alert':
+            notification.alert(title, message);
+            break;
+        case 'info':
+            notification.info(title, message);
+            break;
+        case 'success':
+            notification.success(title, message);
+            break;
+        case 'warning':
+            notification.warning(title, message);
+            break;
+        case 'custom':
+            notification.custom(title, message);
+            break;
+        default:
+            console.warn('Type de notification inconnu :', type);
+    }
+
+    // Réinitialiser l'état après que la notification ait été affichée
+    setTimeout(function () {
+        // Retirer la notification de la liste active après 5 secondes
+        activeNotifications = activeNotifications.filter(function (key) {
+            return key !== notificationKey;
+        });
+    }, 5000); // Durée de la notification (5000 ms = 5 secondes)
+    }
+
+    // Ajouter un contrôle de localisation
+    var lc = L.control.locate({
+    position: 'topleft',
+    strings: {
+        title: 'Localiser ma position'
+    },
+    drawCircle: true,
+    drawMarker: true,
+    follow: true,
+    setView: 'untilPanOrZoom',
+    keepCurrentZoomLevel: false,
+    stopFollowingOnDrag: false,
+    metric: true,
+    icon: 'fa fa-location-arrow',
+    iconLoading: 'fa fa-spinner fa-spin',
+    circleStyle: {
+        color: '#136AEC',
+        fillColor: '#136AEC',
+        fillOpacity: 0.2,
+        weight: 1
+    },
+    markerStyle: {
+        color: '#136AEC',
+        fillColor: '#136AEC',
+        fillOpacity: 0.8,
+        weight: 1
+    },
+    followCircleStyle: {
+        color: '#136AEC',
+        fillColor: '#136AEC',
+        fillOpacity: 0.4,
+        weight: 1
+    },
+    followMarkerStyle: {
+        color: '#136AEC',
+        fillColor: '#136AEC',
+        fillOpacity: 0.8,
+        weight: 1
+    },
+    circlePadding: [0, 0],
+    locateOptions: {
+        enableHighAccuracy: true,
+        maximumAge: 0,
+        timeout: 10000
+    }
+    }).addTo(map);
+
+    // Gérer l'événement `locationfound` pour vérifier la précision
+    map.on('locationfound', function (e) {
+    var accuracy = e.accuracy; // Précision en mètres
+
+    if (accuracy > 100) {
+        showNotification(
+            'alert',
+            'Précision insuffisante',
+            `La précision de votre localisation est de ${Math.round(accuracy)} mètres. 
+            Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
+        );
+    } else {
+        showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.');
+    }
+    });
+
+    // Gérer les erreurs de localisation
+    map.on('locationerror', function (e) {
+    showNotification('warning', 'Erreur de localisation', 'Impossible de localiser votre position : ' + e.message);
+    });
+
+    // Démarrez la localisation automatiquement au chargement de la page
+    lc.start();
 
     //----------------Plugin sidebar------------------
     var sidebar = L.control.sidebar('sidebar', {position: 'left'}).addTo(map);
@@ -193,53 +368,66 @@ document.addEventListener("DOMContentLoaded", function () {
     //~~~Menu listes markers~~~
     // definitions des marqueurs par catégorie à l'aide des icônes
     const markersByCategory = {
-        "Models 3D de lieux": { layer: lieux3DLayer, icon: 'icon/3d.png' },
-        "Lieux d'information": { layer: infoPlaceLayer, icon: 'icon/info.png' },
-        "Sports": { layer: sportPlaceLayer, icon: 'icon/sport.png' },
-        "Toilettes publiques": { layer: toilettesPlaceLayer, icon: 'icon/toilettes.png' },
+        "Batiments": { layer: BatimentsLayer, icon: 'icon/batiment.png' },
+        "Salles importantes": { layer: SallesImportanteLayer, icon: 'icon/pin.png' },
+        "infos": { layer: infoLayer, icon: 'icon/info.png' },
+        "Sports": { layer: sportLayer, icon: 'icon/sport.png' },
+        "Toilettes": { layer: toilettesLayer, icon: 'icon/toilettes.png' },
+        "Lieux notables": { layer: lieuxNotablesLayer, icon: 'icon/star.png' },
+        "Lieux 3D": { layer: lieux3DLayer, icon: 'icon/3d.png' },
+        //debug
         "Markers personnels": { layer: markersPersonnelsLayer, icon: 'icon/location_point.png' },
     };
   
     // creation du menu de markers
     createMarkerMenu(markersByCategory);
-    
+
     function createMarkerMenu(markersByCategory) {
         const markerMenu = document.getElementById('markers');
         markerMenu.innerHTML = '';
         for (const category in markersByCategory) {
-        if (markersByCategory.hasOwnProperty(category)) {
-            const categoryDiv = document.createElement('details');
-            categoryDiv.innerHTML = `<summary><img src="${markersByCategory[category].icon}" width="16" height="16" style="vertical-align: middle;"> ${category}</summary>`;
-            categoryDiv.classList.add('category');
-            markerMenu.appendChild(categoryDiv);
+            if (markersByCategory.hasOwnProperty(category)) {
+                const categoryDiv = document.createElement('details');
+                categoryDiv.innerHTML = `<summary><img src="${markersByCategory[category].icon}" width="16" height="16" style="vertical-align: middle;"> ${category}</summary>`;
+                categoryDiv.classList.add('category');
+                markerMenu.appendChild(categoryDiv);
     
-            const categoryLink = categoryDiv.querySelector('summary');
-            categoryLink.href = '#';
-            categoryLink.addEventListener('click', function () {
-            map.addLayer(markersByCategory[category].layer);
-            });
+                const categoryLink = categoryDiv.querySelector('summary');
+                categoryLink.href = '#';
+                categoryLink.addEventListener('click', function () {
+                    map.addLayer(markersByCategory[category].layer);
+                });
     
-            const nbMarkers = markersByCategory[category].layer.getLayers().length;
-            categoryLink.dataset.nbMarkers = nbMarkers;
-            const span = document.createElement('span');
-            span.classList.add('category-count');
-            span.textContent = ` (${nbMarkers})`;
-            categoryLink.appendChild(span);
+                const nbMarkers = markersByCategory[category].layer.getLayers().length;
+                categoryLink.dataset.nbMarkers = nbMarkers;
+                const span = document.createElement('span');
+                span.classList.add('category-count');
+                span.textContent = ` (${nbMarkers})`;
+                categoryLink.appendChild(span);
     
-            // ajouts de la liste de markers
-            const markersList = document.createElement('ul');
-            markersList.classList.add('markers-list');
-            for (const marker of markersByCategory[category].layer.getLayers()) {
-            const listItem = document.createElement('li');
-            listItem.classList.add('marker-item');
-            listItem.textContent = marker.options.dataName;
-            listItem.addEventListener('click', function () {
-                map.setView(marker.getLatLng(), 18);
-            });
-            markersList.appendChild(listItem);
+                // ajouts de la liste de markers/polygones
+                const markersList = document.createElement('ul');
+                markersList.classList.add('markers-list');
+                markersByCategory[category].layer.getLayers().forEach(layer => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('marker-item');
+                    if (layer.options.dataName) {
+                        listItem.textContent = layer.options.dataName;
+                        if (layer instanceof L.Marker) {
+                            listItem.addEventListener('click', () => map.setView(layer.getLatLng(), 18));
+                        } else if (layer instanceof L.Polygon) {
+                            listItem.addEventListener('click', () => map.fitBounds(layer.getBounds()));
+                        }
+                    } else {
+                        listItem.textContent = "Polygone";
+                        if (layer instanceof L.Polygon) {
+                            listItem.addEventListener('click', () => map.fitBounds(layer.getBounds()));
+                        }
+                    }
+                    markersList.appendChild(listItem);
+                });
+                categoryDiv.appendChild(markersList);
             }
-            categoryDiv.appendChild(markersList);
         }
-        }
-    }
+    }    
 });

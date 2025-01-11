@@ -105,3 +105,18 @@ background-color: #f9f9f9;
   #tailleIconForm button:hover {
     background-color: #45a049;
   }
+
+
+/*Attribution droit d'auteur*/
+.leaflet-control-attribution {
+  font-size: 12px;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.leaflet-control-attribution a {
+  color: #007bff;
+  text-decoration: none;
+}
