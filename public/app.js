@@ -243,14 +243,16 @@ document.addEventListener("DOMContentLoaded", function () {
         position: 'topright', // Position des notifications
         closable: true, // Permettre de fermer manuellement
         dismissable: true, // Permet de cliquer pour fermer
-    })
-    .addTo(map);
+    }).addTo(map);
 
-    // Variables pour suivre l'état de la localisation
-    var lastAccuracyState = null; // Dernier état de précision (suffisante ou insuffisante)
+    // Variable pour suivre l'état de la précision
+    var lastAccuracyState = null; // 'sufficient' ou 'insufficient' ou null
+
+    // Liste pour suivre les notifications actives
+    var activeNotifications = [];
 
     // Fonction pour afficher une notification
-    function showNotification(type, title, message, recurringKey = null) {
+    function showNotification(type, title, message) {
     var notificationKey = title + message;
 
     // Vérifier si la notification est déjà active
@@ -349,11 +351,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
             );
         } 
-        // Si la précision devient suffisante, afficher le message de localisation réussie
-        else if (newAccuracyState === 'sufficient') {
-            showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.');
-        }
-
+        // Si la précision est suffisante, ne rien faire (pas de message)
+        
         // Mettre à jour l'état de la précision
         lastAccuracyState = newAccuracyState;
     }
@@ -361,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Gérer les erreurs de localisation
     map.on('locationerror', function (e) {
+    // Afficher une notification d'erreur si la localisation échoue
     showNotification('warning', 'Erreur de localisation', 'Impossible de localiser votre position : ' + e.message);
 
     // Réinitialiser l'état de la précision à null pour permettre de réafficher le message d'erreur plus tard
