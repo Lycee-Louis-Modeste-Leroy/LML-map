@@ -243,19 +243,28 @@ document.addEventListener("DOMContentLoaded", function () {
         position: 'topright', // Position des notifications
         closable: true, // Permettre de fermer manuellement
         dismissable: true, // Permet de cliquer pour fermer
-    }).addTo(map);
+    })
+    .addTo(map);
 
     // Liste pour suivre les notifications actives
     var activeNotifications = [];
+    // Liste pour les messages récurrents (par exemple, localisation réussie)
+    var recurringNotifications = {
+    "localisation_reussie": false
+    };
 
     // Fonction pour afficher une notification personnalisée
-    function showNotification(type, title, message) {
-    // Créer une clé unique basée sur le contenu du titre et du message
+    function showNotification(type, title, message, recurringKey = null) {
+    // Vérifier si la notification est déjà active (en doublon)
     var notificationKey = title + message;
 
-    // Vérifier si la notification est déjà active (en doublon)
     if (activeNotifications.includes(notificationKey)) {
         return; // Ne pas afficher la notification si elle est déjà présente
+    }
+
+    // Si c'est une notification récurrente, vérifier si elle a déjà été affichée
+    if (recurringKey && recurringNotifications[recurringKey]) {
+        return; // Ne pas afficher la notification récurrente si elle a déjà été affichée
     }
 
     // Ajouter la notification à la liste des notifications actives
@@ -282,12 +291,22 @@ document.addEventListener("DOMContentLoaded", function () {
             console.warn('Type de notification inconnu :', type);
     }
 
+    // Si c'est une notification récurrente, marquer comme affichée
+    if (recurringKey) {
+        recurringNotifications[recurringKey] = true;
+    }
+
     // Réinitialiser l'état après que la notification ait été affichée
     setTimeout(function () {
         // Retirer la notification de la liste active après 5 secondes
         activeNotifications = activeNotifications.filter(function (key) {
             return key !== notificationKey;
         });
+
+        // Réinitialiser les notifications récurrentes après un délai (5 secondes)
+        if (recurringKey) {
+            recurringNotifications[recurringKey] = false;
+        }
     }, 5000); // Durée de la notification (5000 ms = 5 secondes)
     }
 
@@ -349,14 +368,18 @@ document.addEventListener("DOMContentLoaded", function () {
             `La précision de votre localisation est de ${Math.round(accuracy)} mètres. 
             Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
         );
+        // Réinitialiser le message "Localisation réussie" pour permettre sa réaffichage ultérieur
+        recurringNotifications["localisation_reussie"] = false;
     } else {
-        showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.');
+        showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.', "localisation_reussie");
     }
     });
 
     // Gérer les erreurs de localisation
     map.on('locationerror', function (e) {
     showNotification('warning', 'Erreur de localisation', 'Impossible de localiser votre position : ' + e.message);
+    // Réinitialiser le message "Localisation réussie" pour permettre sa réaffichage ultérieur
+    recurringNotifications["localisation_reussie"] = false;
     });
 
     // Démarrez la localisation automatiquement au chargement de la page
