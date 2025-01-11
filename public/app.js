@@ -246,30 +246,18 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .addTo(map);
 
-    // Liste pour suivre les notifications actives
-    var activeNotifications = [];
+    // Variables pour suivre l'état de la localisation
+    var lastAccuracyState = null; // Dernier état de précision (suffisante ou insuffisante)
 
-    // Liste des notifications récurrentes et de leur statut
-    var recurringNotifications = {
-    "localisation_reussie": false
-    };
-
-    // Fonction pour afficher une notification personnalisée
+    // Fonction pour afficher une notification
     function showNotification(type, title, message, recurringKey = null) {
-    // Créer une clé unique pour chaque notification
     var notificationKey = title + message;
 
-    // Vérifier si la notification est déjà active (en doublon)
+    // Vérifier si la notification est déjà active
     if (activeNotifications.includes(notificationKey)) {
         return; // Ne pas afficher si le même message est déjà affiché
     }
 
-    // Si c'est une notification récurrente, vérifier si elle a déjà été affichée
-    if (recurringKey && recurringNotifications[recurringKey]) {
-        return; // Ne pas afficher la notification si elle a déjà été affichée
-    }
-
-    // Ajouter la notification à la liste des notifications actives
     activeNotifications.push(notificationKey);
 
     // Afficher la notification
@@ -286,29 +274,15 @@ document.addEventListener("DOMContentLoaded", function () {
         case 'warning':
             notification.warning(title, message);
             break;
-        case 'custom':
-            notification.custom(title, message);
-            break;
         default:
             console.warn('Type de notification inconnu :', type);
     }
 
-    // Si c'est une notification récurrente, marquer comme affichée
-    if (recurringKey) {
-        recurringNotifications[recurringKey] = true;
-    }
-
-    // Réinitialiser l'état après que la notification ait été affichée
+    // Retirer la notification de la liste active après 5 secondes
     setTimeout(function () {
-        // Retirer la notification de la liste active après 5 secondes
         activeNotifications = activeNotifications.filter(function (key) {
             return key !== notificationKey;
         });
-
-        // Réinitialiser les notifications récurrentes après un délai (5 secondes)
-        if (recurringKey) {
-            recurringNotifications[recurringKey] = false;
-        }
     }, 5000); // Durée de la notification (5000 ms = 5 secondes)
     }
 
@@ -362,30 +336,35 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gérer l'événement `locationfound` pour vérifier la précision
     map.on('locationfound', function (e) {
     var accuracy = e.accuracy; // Précision en mètres
+    var newAccuracyState = (accuracy <= 100) ? 'sufficient' : 'insufficient'; // Etat actuel de la précision
 
-    // Si la précision est trop faible, afficher une alerte
-    if (accuracy > 100) {
-        showNotification(
-            'alert',
-            'Précision insuffisante',
-            `La précision de votre localisation est de ${Math.round(accuracy)} mètres. 
-            Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
-        );
-        // Réinitialiser la notification "Localisation réussie" pour pouvoir la réafficher plus tard
-        recurringNotifications["localisation_reussie"] = false;
-    } else {
-        // Afficher la notification de localisation réussie si elle n'a pas déjà été affichée
-        if (!recurringNotifications["localisation_reussie"]) {
-            showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.', "localisation_reussie");
+    // Si l'état de précision a changé (passage de suffisant à insuffisant ou vice-versa)
+    if (newAccuracyState !== lastAccuracyState) {
+        // Si la précision est insuffisante, afficher l'alerte
+        if (newAccuracyState === 'insufficient') {
+            showNotification(
+                'alert',
+                'Précision insuffisante',
+                `La précision de votre localisation est de ${Math.round(accuracy)} mètres. 
+                Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
+            );
+        } 
+        // Si la précision devient suffisante, afficher le message de localisation réussie
+        else if (newAccuracyState === 'sufficient') {
+            showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.');
         }
+
+        // Mettre à jour l'état de la précision
+        lastAccuracyState = newAccuracyState;
     }
     });
 
     // Gérer les erreurs de localisation
     map.on('locationerror', function (e) {
     showNotification('warning', 'Erreur de localisation', 'Impossible de localiser votre position : ' + e.message);
-    // Réinitialiser la notification "Localisation réussie" pour permettre sa réaffichage
-    recurringNotifications["localisation_reussie"] = false;
+
+    // Réinitialiser l'état de la précision à null pour permettre de réafficher le message d'erreur plus tard
+    lastAccuracyState = null;
     });
 
     // Démarrez la localisation automatiquement au chargement de la page
