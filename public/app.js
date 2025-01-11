@@ -248,23 +248,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Liste pour suivre les notifications actives
     var activeNotifications = [];
-    // Liste pour les messages récurrents (par exemple, localisation réussie)
+
+    // Liste des notifications récurrentes et de leur statut
     var recurringNotifications = {
     "localisation_reussie": false
     };
 
     // Fonction pour afficher une notification personnalisée
     function showNotification(type, title, message, recurringKey = null) {
-    // Vérifier si la notification est déjà active (en doublon)
+    // Créer une clé unique pour chaque notification
     var notificationKey = title + message;
 
+    // Vérifier si la notification est déjà active (en doublon)
     if (activeNotifications.includes(notificationKey)) {
-        return; // Ne pas afficher la notification si elle est déjà présente
+        return; // Ne pas afficher si le même message est déjà affiché
     }
 
     // Si c'est une notification récurrente, vérifier si elle a déjà été affichée
     if (recurringKey && recurringNotifications[recurringKey]) {
-        return; // Ne pas afficher la notification récurrente si elle a déjà été affichée
+        return; // Ne pas afficher la notification si elle a déjà été affichée
     }
 
     // Ajouter la notification à la liste des notifications actives
@@ -361,6 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
     map.on('locationfound', function (e) {
     var accuracy = e.accuracy; // Précision en mètres
 
+    // Si la précision est trop faible, afficher une alerte
     if (accuracy > 100) {
         showNotification(
             'alert',
@@ -368,17 +371,20 @@ document.addEventListener("DOMContentLoaded", function () {
             `La précision de votre localisation est de ${Math.round(accuracy)} mètres. 
             Veuillez activer la localisation précise dans vos paramètres ou désactiver la localisation.`
         );
-        // Réinitialiser le message "Localisation réussie" pour permettre sa réaffichage ultérieur
+        // Réinitialiser la notification "Localisation réussie" pour pouvoir la réafficher plus tard
         recurringNotifications["localisation_reussie"] = false;
     } else {
-        showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.', "localisation_reussie");
+        // Afficher la notification de localisation réussie si elle n'a pas déjà été affichée
+        if (!recurringNotifications["localisation_reussie"]) {
+            showNotification('success', 'Localisation réussie', 'La précision de votre localisation est acceptable.', "localisation_reussie");
+        }
     }
     });
 
     // Gérer les erreurs de localisation
     map.on('locationerror', function (e) {
     showNotification('warning', 'Erreur de localisation', 'Impossible de localiser votre position : ' + e.message);
-    // Réinitialiser le message "Localisation réussie" pour permettre sa réaffichage ultérieur
+    // Réinitialiser la notification "Localisation réussie" pour permettre sa réaffichage
     recurringNotifications["localisation_reussie"] = false;
     });
 
