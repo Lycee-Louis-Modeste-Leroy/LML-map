@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         maxNativeZoom: 17,
         attribution: 'Kartendaten: © OpenStreetMap-Mitwirkende, SRTM Kartendarstellung: © OpenTopoMap (CC-BY-SA)'});
     
-    const map = L.map('map', {layers: [Satellite]}).setView([49.02188501857289, 1.165796267840064], 17);
+    const map = L.map('map', {layers: [Satellite]}).setView([49.02188501857289, 1.165796267840064], 18);
     //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map); // Carte de fond OpenStreetMap
     L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'ArcGIS'}).addTo(map);
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const tailleIconInput = document.getElementById('tailleIconInput');
-    const tailleIcon = getUrlParameter('tailleIcon') || 30;
+    const tailleIcon = getUrlParameter('tailleIcon') || 28;
     tailleIconInput.value = tailleIcon;
 
     document.getElementById('tailleIconForm').addEventListener('submit', function(event) {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'foyer'
+            dataName: 'Foyer (MDL)'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info foyer ici</a>').openPopup();    
     
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'cantine'
+            dataName: 'Cantine'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info cantine ici</a>').openPopup();
     
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'administration'
+            dataName: 'Administration'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info administration ici</a>').openPopup();
     
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'hall'
+            dataName: 'Hall'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info hall ici</a>').openPopup();
 
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat1'
+            dataName: 'Batiment 1'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bâtiment 1 ici</a>').openPopup();
 
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat2'
+            dataName: 'Batiment 2'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bâtiment 2 ici</a>').openPopup();
 
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'gymnase'
+            dataName: 'Gymnase'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info gymnase ici</a>').openPopup();
 
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat3'
+            dataName: 'Batiment 3'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bâtiment 3 ici</a>').openPopup();
 
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'garage'
+            dataName: 'Garage'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info garage ici</a>').openPopup();
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat4'
+            dataName: 'Batiment 4'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bat4 ici</a>').openPopup();
 
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat5'
+            dataName: 'Batiment 5'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bat5 ici</a>').openPopup();
 
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat6'
+            dataName: 'Batiment 6'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bat6 ici</a>').openPopup();
 
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.4,
             weight: 2,
-            dataName: 'bat7'
+            dataName: 'Batiment 7'
         }
     ).bindPopup('<a href="lien_vers_la_page.html">info bat7 ici</a>').openPopup();
 
@@ -234,10 +234,20 @@ document.addEventListener("DOMContentLoaded", function () {
     BatimentsPolygons.push(foyer, cantine, administration, hall, bat1, bat2, gymnase, bat3, garage, bat4, bat5, bat6, bat7, Greta);
 
     // -markers de Salles Importante-
-    //SallesImportante.push(L.marker([49.02373449920583, 1.1493495595137675], {dataName: 'Salle '}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022066294911106, 1.1650882118194883], {dataName: 'Salle de permanance [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02218719042311, 1.1652149785291157], {dataName: 'Vie Scolaire / CPE / Psy [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022431264606546, 1.1657717103546468], {dataName: 'CDI [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02259581704168, 1.1671070795810345], {dataName: 'Salle Louis Maury [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.021824029678434, 1.164313919358065], {dataName: 'Salle de l`Europe [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.020596678096695, 1.1638568076223212], {dataName: 'Infirmerie [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.020908012972654, 1.1639372738911764], {dataName: 'Bibliopret / PEEP [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02249982965343, 1.166984696054866], {dataName: 'Club Radio [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02249032614423, 1.167692203651642], {dataName: 'Salle Radio [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la et changer icon aussi</a>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Lieux d'information-
-    //info.push(L.marker([49.02373449920583, 1.146], {dataName: 'Accueil'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
+    info.push(L.marker([49.02213033312576, 1.1646180776404018], {dataName: 'Accueil [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
+    info.push(L.marker([49.02204518983422, 1.1645240080080357], {dataName: 'Secrétariat de la scolarité [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
+    info.push(L.marker([49.02248256330475, 1.1658561681541706], {dataName: 'Bureau professeur documentaliste CDI [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de sport-
     //sport.push(L.marker([49.02373449920583, 1.151], {dataName: 'Terrain de basket extérieur'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
@@ -290,28 +300,52 @@ document.addEventListener("DOMContentLoaded", function () {
    sportPolygons.push(terrain_basket_hand, terrain_petanque, piste_athletisme, terrain_sportif);
 
     // -markers de toilettes-
-    //toilettes.push(L.marker([49.02373449920583, 1.151], {dataName: 'Toilettes hall (en travaux)'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02218659042677, 1.1648641473212509], {dataName: 'Toilettes hall mixte (en travaux) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.021551295355884, 1.1634032226756539], {dataName: 'Toilettes foyer mixte (si adhésion MDL) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02176913980874, 1.1642329931260877], {dataName: 'Toilettes cantine homme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02173308197326, 1.1640841305287053], {dataName: 'Toilettes cantine femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022316164563854, 1.1655779661759897], {dataName: 'Toilettes bat1 mixte [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02246388966964, 1.1662661710142048], {dataName: 'Toilettes bat1 mixte [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022617628561875, 1.1668610504435677], {dataName: 'Toilettes bat1 mixte [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022334820499744, 1.1656291745959177], {dataName: 'Toilettes bat1 mixte [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02248158028482, 1.166247468851344], {dataName: 'Toilettes bat1 mixte [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02165235546742, 1.1678756686463967], {dataName: 'Toilettes gymnase homme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.021674541534225, 1.1680064853206533], {dataName: 'Toilettes gymnase femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.0225792690205, 1.168433415405338], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02235877682576, 1.1686614042554015], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02232106218221, 1.169383441735178], {dataName: 'Toilettes bat4 homme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02233513336949, 1.1694424503323386], {dataName: 'Toilettes bat4 femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.021185560536914, 1.1644888886861064], {dataName: 'Toilettes bat5 homme/femme [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02123920814112, 1.164530462925015], {dataName: 'Toilettes bat5 homme/femme [1er]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.021233051861586, 1.1645921537311374], {dataName: 'Toilettes bat5 homme/femme [2ème]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat6 mixte (les fameux) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux Notables-
-    //lieuxNotables.push(L.marker([49.02373449920583, 1.151], {dataName: 'Buisson de la photo de classe'}).bindPopup('<a href="https://urlicilaaaa">lieu emblématique du lycée qui nous montre sa beauté une fois par an</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02197606944457, 1.165105136912723], {dataName: 'Buisson de la photo de classe'}).bindPopup('<a href="https://urlicilaaaa">lieu emblématique du lycée qui nous montre sa beauté une fois par an</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.022714718289365, 1.1685367783843408], {dataName: 'Entrée sous-sol (interdit) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">lieu légendaire du lycée où seuls quelques rares élus ont pénétré</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02239888358386, 1.169031051729405], {dataName: 'Allée couverte'}).bindPopup('<a href="https://urlicilaaaa">petite allée couverte avec un style bien à elle</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02140167737405, 1.1630875097520046], {dataName: 'Statue 1'}).bindPopup('<a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02161022706215, 1.1629848863265104], {dataName: 'Statue 2'}).bindPopup('<a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02151391960788, 1.1644917909650792], {dataName: 'Statue 3'}).bindPopup('<a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02168298005651, 1.165155125863532], {dataName: 'Drapeaux'}).bindPopup('<a href="https://urlicilaaaa">Drapeaux aux lycée</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux 3D-
     //lieux3D.push(L.marker([49.02373449920583, 1.151], {dataName: 'vue 3d du hall (c est un exemple !)'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Markers personnels- (pour debug c'est ici en gros)
-    markersPersonnels.push(L.marker([49.024, 1.150], {dataName: 'debug point'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/location_point.png', iconSize: [tailleIcon, tailleIcon]})));
+    markersPersonnels.push(L.marker([0, 0], {dataName: 'debug point'}).bindPopup('<a href="https://urlicilaaaa">point de debug</a>').setIcon(new L.Icon({iconUrl: 'icon/location_point.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de markers Personnels "Polygones"- (pour debug c'est ici aussi)
     var debugpolygon1 = L.polygon(
         [
-            [49.025, 1.150],
-            [49.026, 1.152],
-            [49.027, 1.151],
-            [49.025, 1.150]
+            [0, 1],
+            [1, 1],
+            [1, 0],
+            [0, 0]
         ],
         {
-            color: "#ff0000",
-            fillColor: "#ff6666",
+            color: "#000000",
+            fillColor: "#666666",
             fillOpacity: 0.4,
             weight: 2,
             dataName: 'Polygone debug'
@@ -528,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const markersByCategory = {
         "Batiments": { layer: BatimentsLayer, icon: 'icon/batiment.png' },
         "Salles importantes": { layer: SallesImportanteLayer, icon: 'icon/pin.png' },
-        "infos": { layer: infoLayer, icon: 'icon/info.png' },
+        "Lieux d'informations": { layer: infoLayer, icon: 'icon/info.png' },
         "Sports": { layer: sportLayer, icon: 'icon/sport.png' },
         "Toilettes": { layer: toilettesLayer, icon: 'icon/toilettes.png' },
         "Lieux notables": { layer: lieuxNotablesLayer, icon: 'icon/star.png' },
@@ -572,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (layer.options.dataName) {
                         listItem.textContent = layer.options.dataName;
                         if (layer instanceof L.Marker) {
-                            listItem.addEventListener('click', () => map.setView(layer.getLatLng(), 18));
+                            listItem.addEventListener('click', () => map.setView(layer.getLatLng(), 19));
                         } else if (layer instanceof L.Polygon) {
                             listItem.addEventListener('click', () => map.fitBounds(layer.getBounds()));
                         }
