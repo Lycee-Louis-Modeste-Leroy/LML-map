@@ -321,6 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat6 mixte (les fameux) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux Notables-
+    lieuxNotables.push(L.marker([49.02214916315287, 1.1649138337638885], {dataName: 'Piano'}).bindPopup('<a href="https://urlicilaaaa">une musique envoutante vous y attend</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.02197606944457, 1.165105136912723], {dataName: 'Buisson de la photo de classe'}).bindPopup('<a href="https://urlicilaaaa">lieu emblématique du lycée qui nous montre sa beauté une fois par an</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.022714718289365, 1.1685367783843408], {dataName: 'Entrée sous-sol (interdit) [RDC]'}).bindPopup('<a href="https://urlicilaaaa">lieu légendaire du lycée où seuls quelques rares élus ont pénétré</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.02239888358386, 1.169031051729405], {dataName: 'Allée couverte'}).bindPopup('<a href="https://urlicilaaaa">petite allée couverte avec un style bien à elle</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
