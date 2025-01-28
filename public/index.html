@@ -18,9 +18,11 @@
     <!-- Inclure les fichiers du plugin Fullscreen en CDN -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-    <!-- Inclure les fichiers du plugin Notifications en local -->
+    <!-- Inclure les fichiers du plugin Notifications en CDN -->
     <script src="https://cdn.jsdelivr.net/npm/leaflet-notifications@1.0.7/js/leaflet-notifications.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-notifications@1.0.7/css/leaflet-notifications.min.css">
+    <!-- Inclure les fichiers du plugin Location Share en local -->
+    <script src="plugin/Leaflet.LocationShare.js"></script>
     <!-- Inclure les fichiers du plugin Dialog en local -->
     <script src="plugin/Leaflet.Dialog.js"></script>
     <link rel="stylesheet" href="plugin/Leaflet.Dialog.css"/>
@@ -59,6 +61,7 @@
           <div class="sidebar-pane" id="credits">
             <h1 class="sidebar-header">Crédits<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             <h2 style="text-align: center;"><strong>Projet carte interactive du lycée Louis Modest Leroy</strong></h2>
+            <h4 style="text-align: center;" id="project-info"></h4>
             <h2 style="text-align: center;"><em><strong>~-~</strong></em><em><strong>Créer par</strong></em><em><strong>~-~</strong></em></h2>
             <ul>
             <li><strong>A. Cédric / </strong><em>&nbsp;carte interactive - intégrations des plugins - sidebar - recherches</em></li>
@@ -75,7 +78,7 @@
             <li><a title="sport icons" href="https://www.flaticon.com/free-icons/sport">Sport icons created by Freepik - Flaticon</a></li>
             <li><a title="open sidebar icons" href="https://www.jeffreydegroot.com/">Open sidebar created by jeffrey de groot</a></li>
             <li><a title="location icons" href="https://www.flaticon.com/free-icons/location-pin">Location pin icons created by Iconpro86 - Flaticon</a></li>
-            <li><a title="WC icons" href="https://www.flaticon.com/fr/icone-gratuite/papier-toilette_1390953">WC icons created by Freepik - Flaticon</a></li>
+            <li><a href="https://www.flaticon.com/free-icons/wc" title="wc icons">Wc icons created by Freepik - Flaticon</a></li>
             <li><a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Anggara - Flaticon</a></li>
             <li><a title="3d icons" href="https://www.flaticon.com/fr/icone-gratuite/la-modelisation_3908215">la-modelisation icons created by Freepik - Flaticon</a></li>
             <li><a href="https://www.flaticon.com/free-icons/town" title="town icons">Town icons created by monkik - Flaticon</a></li>
@@ -90,6 +93,7 @@
             <li><a title="leaflet.fullscreen" href="https://github.com/Leaflet/Leaflet.fullscreen">leaflet.fullscreen</a></li>
             <li><a title="leaflet-locatecontrol" href="https://github.com/domoritz/leaflet-locatecontrol">leaflet-locatecontrol</a></li>
             <li><a title="OSMBuildings-Leaflet" href="https://github.com/kekscom/osmbuildings/">OSMBuildings-Leaflet</a></li>
+            <li><a title="leaflet-Location-Share" href="https://github.com/CliffCloud/Leaflet.LocationShare">leaflet-Location-Share</a></li>
             </ul>
             <h3><strong>Base:</strong></h3>
             <ul>
