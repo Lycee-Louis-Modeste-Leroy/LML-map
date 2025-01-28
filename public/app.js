@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.onload = function() {
         showNotification('info', 'Bienvenue', 'Cliquez sur les bâtiments et points pour obtenir des informations');
         showNotification('info', 'Bienvenue', 'Utilisez le menu à gauche pour voir la liste complétes des lieux disponibles');
+        showNotification('info', 'Bienvenue', 'Utilisez le menu en haut à droite pour changer de fond de carte et de calques');
     };
 
     //----------------Catégories de données------------------
@@ -488,12 +489,12 @@ document.addEventListener("DOMContentLoaded", function () {
             console.warn('Type de notification inconnu :', type);
     }
 
-    // Retirer la notification de la liste active après 10 secondes
+    // Retirer la notification de la liste active après 15 secondes
     setTimeout(function () {
         activeNotifications = activeNotifications.filter(function (key) {
             return key !== notificationKey;
         });
-    }, 10000); // Durée de la notification (10 000 ms = 10 secondes)
+    }, 15000); // Durée de la notification (15 000 ms = 15 secondes)
     }
 
     // Ajouter un contrôle de localisation
