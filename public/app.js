@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
     info.push(L.marker([49.02204518983422, 1.1645240080080357], {dataName: 'Secrétariat de la scolarité [1er]'}).bindPopup('<h3>Secrétariat de la scolarité [1er]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
     info.push(L.marker([49.02248256330475, 1.1658561681541706], {dataName: 'Bureau professeur documentaliste CDI [RDC]'}).bindPopup('<h3>Bureau professeur documentaliste CDI [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
     info.push(L.marker([49.02218719042311, 1.1652149785291157], {dataName: 'Vie Scolaire / CPE / PsyEN [RDC]'}).bindPopup('<h3>Vie Scolaire / CPE / PsyEN [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
+    info.push(L.marker([49.02233695649969, 1.1691771346988213], {dataName: 'BDE : bureau des entreprises [RDC]'}).bindPopup('<h3>Vie Scolaire / CPE / PsyEN [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de sport-
     //sport.push(L.marker([49.02373449920583, 1.151], {dataName: 'Terrain de basket extérieur'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
