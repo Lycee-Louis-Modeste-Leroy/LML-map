@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             color: "#f5e645",
             fillColor: "#ffec17",
-            fillOpacity: 0.2,
+            fillOpacity: 0.1,
             weight: 2,
             dataName: 'Terrain de Basket/Hand'
         }
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             color: "#f5e645",
             fillColor: "#ffec17",
-            fillOpacity: 0.2,
+            fillOpacity: 0.1,
             weight: 2,
             dataName: 'Terrain de Pétanque'
         }
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             color: "#f5e645",
             fillColor: "#ffec17",
-            fillOpacity: 0.2,
+            fillOpacity: 0.1,
             weight: 2,
             dataName: 'Terrain sportif'
         }
