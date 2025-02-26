@@ -84,6 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //----------------Ajout des données (marqueurs/polygones avec les popups et liens)------------------
     // -markers de Batiments "Polygones"-
+    // icons batiments
+    var iconbat1 = L.marker([49.02223190775264, 1.1653386197483044], {dataName: 'Batiment 1'}).setIcon(new L.Icon({iconUrl: 'icon/numero-1.png', iconSize: [tailleIcon, tailleIcon]})).addTo(map);
+    
+    // polygons batiments
     var foyer = L.polygon(
         [[49.02165798958339, 1.1631121630141763], [49.02144374302472, 1.1632170749776947], [49.021499658722206, 1.1634594727381113], [49.021707299576434, 1.1633506946629666], [49.02165798958339, 1.1631121630141763]],
         {
