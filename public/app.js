@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
     BatimentsPolygons.push(foyer, cantine, administration, hall, bat1, bat2, gymnase, bat3, garage, bat4, bat5, bat6, bat7, Greta);
 
     // -markers de Salles Importante-
-    SallesImportante.push(L.marker([49.022066294911106, 1.1650882118194883], {dataName: 'Salle de permanance [RDC]'}).bindPopup('<h3>Salle de permanance [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022066294911106, 1.1650882118194883], {dataName: 'Salle de permanence [RDC]'}).bindPopup('<h3>Salle de permanence [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.022431264606546, 1.1657717103546468], {dataName: 'CDI [RDC]'}).bindPopup('<h3>CDI [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.022338446008355, 1.1659418738867184], {dataName: 'Salles informatiques [RDC]'}).bindPopup('<h3>Salles informatiques [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.02259581704168, 1.1671070795810345], {dataName: 'Salle Louis Maury [RDC]'}).bindPopup('<h3>Salle Louis Maury [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
