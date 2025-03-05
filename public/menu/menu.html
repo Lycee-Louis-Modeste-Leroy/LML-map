@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+
+            window.onload = function() {
+                if (isMobile()) {
+                    window.location.href = "../carte-lml/index.html";
+                } else {
+                    setTimeout(function() {
+                        document.getElementById('intro').classList.add('hidden');
+                        setTimeout(function() {
+                            document.getElementById('intro').style.display = 'none';
+                            document.getElementById('menu').style.display = 'flex';
+                        }, 1000);
+                    }, 1000);
+                }
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div id="intro">
+            <h1>Lycée Louis Modeste Leroy</h1>
+        </div>
+        <div id="credits">
+            <p>Développé par <a href="https://github.com/cedr0u" target="_blank">Cedric.A</a></p>
+        </div>
+        <div id="menu">
+            <div class="menu-item" style="background-image: url('background/carte-interactive-background.png');" onclick="window.location.href='../carte-lml/index.html'">
+                <a href="../carte-lml/index.html">Carte interactive du lycée</a>
+            </div>
+            <div class="menu-item" style="background-image: url('background/visite-3d-background.png');" onclick="window.location.href='../visite-3d/index.html'">
+                <a href="../visite-3d/index.html">Visite 3D (Gaussian Splat)</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-# Carte interactive du lycée Louis Modeste Leroy
+# Carte interactive et visite 3d du lycée Louis Modeste Leroy
 
 ## Présentation
 
