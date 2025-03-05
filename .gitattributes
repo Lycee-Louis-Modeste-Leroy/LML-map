@@ -2,4 +2,3 @@
 * text=auto
 *.ply filter=lfs diff=lfs merge=lfs -text
 *.splat filter=lfs diff=lfs merge=lfs -text
-3d-gaussian-splat-main.html filter=lfs diff=lfs merge=lfs -text
