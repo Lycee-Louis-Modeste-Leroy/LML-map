@@ -231,6 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>Bâtiment 6</h3>
         <p>
             <strong>- RDC :</strong> infirmerie<br>
+            <strong>- 1er :</strong> salle d'examen<br>
             <strong>- 2ème et 3ème :</strong> internat
         </p>
     `).openPopup();
@@ -271,10 +272,21 @@ document.addEventListener("DOMContentLoaded", function () {
     SallesImportante.push(L.marker([49.022338446008355, 1.1659418738867184], {dataName: 'Salles informatiques [RDC]'}).bindPopup('<h3>Salles informatiques [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.02259581704168, 1.1671070795810345], {dataName: 'Salle Louis Maury [RDC]'}).bindPopup('<h3>Salle Louis Maury [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.021824029678434, 1.164313919358065], {dataName: "Salle de l'Europe [RDC]"}).bindPopup("<h3>Salle de l'Europe [RDC]</h3>").setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022509930323615, 1.166138064081794], {dataName: "Amphithéâtre [RDC]"}).bindPopup("<h3>Amphithéâtre [RDC]</h3>").setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.020596678096695, 1.1638568076223212], {dataName: 'Infirmerie [RDC]'}).bindPopup('<h3>Infirmerie [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.020908012972654, 1.1639372738911764], {dataName: 'Bibliopret / PEEP [1er]'}).bindPopup('<h3>Bibliopret / PEEP [1er]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.02249982965343, 1.166984696054866], {dataName: 'Club Radio [RDC]'}).bindPopup('<h3>Club Radio [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
     SallesImportante.push(L.marker([49.02081864394745, 1.163284489310341], {dataName: 'Foyer des internes [RDC]'}).bindPopup('<h3>Foyer des internes [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022554364707915, 1.167503507956762], {dataName: 'Plateau technique productique (BAC pro / BTS CPRP) [RDC]'}).bindPopup('<h3>Plateau technique productique (BAC pro / BTS CPRP) [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02209050290297, 1.1677344280123167], {dataName: 'Plateau technique maintenance (BAC pro / BTS NSPROD) [RDC]'}).bindPopup('<h3>Plateau technique maintenance (BAC pro / BTS NSPROD) [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02112757788211, 1.1645037769812598], {dataName: 'Plateau technique ASSP [3eme]'}).bindPopup('<h3>Plateau technique ASSP [3eme]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.022519870637545, 1.1684355862853075], {dataName: 'Salles STI2D [RDC]'}).bindPopup('<h3>Salles STI2D [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.0227121043548, 1.1685960875677615], {dataName: 'Salles SI [RDC]'}).bindPopup('<h3>Salles SI [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02208387275787, 1.1686630577308887], {dataName: 'Plateau technique AMA CV [RDC]'}).bindPopup('<h3>Plateau technique AMA CV [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02213416072579, 1.1694254031774187], {dataName: 'Salles BTS CIEL [RDC]'}).bindPopup('<h3>Salles BTS CIEL [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02247283524746, 1.1694907160832435], {dataName: 'Salles BAC pro CIEL [1er]'}).bindPopup('<h3>Salles BAC pro CIEL [1er]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.0222091647691, 1.1697846903457927], {dataName: 'Salles d\'examens [RDC]'}).bindPopup('<h3>Salles d\'examens [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
+    SallesImportante.push(L.marker([49.02270981871621, 1.1693108439853368], {dataName: 'Atelier méchanique auto [RDC]'}).bindPopup('<h3>Atelier méchanique auto [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/pin.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Lieux d'information-
     info.push(L.marker([49.02213033312576, 1.1646180776404018], {dataName: 'Accueil [RDC]'}).bindPopup('<h3>Accueil [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
@@ -355,6 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lieuxNotables.push(L.marker([49.02161022706215, 1.1629848863265104], {dataName: 'Statue 2'}).bindPopup('<h3>Statue 2</h3><a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.02151391960788, 1.1644917909650792], {dataName: 'Statue 3'}).bindPopup('<h3>Statue 3</h3><a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.02168298005651, 1.165155125863532], {dataName: 'Drapeaux'}).bindPopup('<h3>Drapeaux</h3><a href="https://urlicilaaaa">Drapeaux aux lycée</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02150165732003, 1.1647406644811722], {dataName: 'Plaque commémorative'}).bindPopup('<h3>Plaque commémorative</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux 3D-
     //lieux3D.push(L.marker([49.02373449920583, 1.151], {dataName: 'vue 3d du hall (c est un exemple !)'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
@@ -585,8 +598,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var sidebar = L.control.sidebar('sidebar', {position: 'left'}).addTo(map);
     
     // Ajouter les informations de version et de date de mise à jour
-    const version = '0.1.4';
-    const updateTimestamp = 1738021214; // Timestamp à modifier manuellement
+    const version = '0.1.6';
+    const updateTimestamp = 1741310853; // Timestamp à modifier manuellement
     const updateDate = new Date(updateTimestamp * 1000).toLocaleDateString('fr-FR', {
         year: 'numeric',
         month: 'long',
