@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Foyer (MDL)'
         }
-    ).bindPopup('<h3>Foyer (MDL)</h3><a href="lien_vers_la_page.html">info foyer ici</a>').openPopup();    
+    ).bindPopup('<h3>Foyer (MDL)</h3>').openPopup();    
     
     var cantine = L.polygon(
         [[49.02171209338604, 1.1633535855387436], [49.02151291278017, 1.1634585625457703], [49.02177450926399, 1.1646748961331639], [49.02183141779108, 1.1646441028779009], [49.021810306570586, 1.1645657200460278], [49.02179378473994, 1.164571318819526], [49.02176074106271, 1.1644257507028044], [49.02189842290795, 1.164354366338614], [49.021921369845586, 1.1644453464109858], [49.02195257766337, 1.1644341488639327], [49.0218442680941, 1.1639456558577308], [49.021921369845586, 1.1639050647488034], [49.021930548617235, 1.1639316589239002], [49.02198837484187, 1.1639022653612017], [49.02189842290795, 1.1635005533480296], [49.02175706954117, 1.1635747370997649], [49.02172402583906, 1.163412372662492], [49.02176441258342, 1.1633927769543106], [49.02175339801994, 1.1633367892173396], [49.02171209338604, 1.1633535855387436]],
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Restaurant scolaire'
         }
-    ).bindPopup('<h3>Restaurant scolaire</h3><a href="lien_vers_la_page.html">info restaurant scolaire ici</a>').openPopup();
+    ).bindPopup('<h3>Restaurant scolaire</h3>').openPopup();
     
     var administration = L.polygon(
         [[49.021816578367435, 1.1645556259747423], [49.02184411473635, 1.1646983947039473], [49.022157110390026, 1.164540229346727], [49.02212957419425, 1.164408658164632], [49.022079091129456, 1.1644296535662306], [49.02206348726253, 1.164358269201216], [49.02201025050411, 1.1643876627639145], [49.02201025050411, 1.1644044590844942], [49.02192121648807, 1.1644506489677724], [49.02192855950494, 1.1644800425296467], [49.02188909077222, 1.1645010379312168], [49.021890008650075, 1.164515034865019], [49.021816578367435, 1.1645556259747423]],
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Hall'
         }
-    ).bindPopup('<h3>Hall</h3><a href="lien_vers_la_page.html">info hall ici</a>').openPopup();
+    ).bindPopup('<h3>Hall</h3>').openPopup();
 
     var bat1 = L.polygon(
         [[49.02224223509796, 1.16490950361748], [49.0219356389797, 1.165068393303386], [49.02196558009024, 1.165196235578236], [49.02210929716915, 1.165121356531273], [49.022227863447256, 1.165630899315829], [49.02208175142795, 1.165705778362792], [49.02211049480971, 1.1658628417304726], [49.02225900201893, 1.1657824837279236], [49.02236798686587, 1.1662591527843915], [49.02222187525797, 1.1663449897414466], [49.02225540910757, 1.166502053108104], [49.02240152061697, 1.1664253477429156], [49.022512194450826, 1.1669053551238733], [49.022446618780094, 1.1669421363874335], [49.02251068696515, 1.1672455818100218], [49.02273228447507, 1.1671237108226364], [49.022714925886845, 1.1670289277031713], [49.02272388515877, 1.1670272198992677], [49.02269140778975, 1.1668572934076735], [49.02267684896191, 1.1668641246232312], [49.022666209815924, 1.1668222834263986], [49.022619733519804, 1.1668470465833138], [49.02250606239687, 1.1663475139298498], [49.022553098755196, 1.166322750772963], [49.022528460668326, 1.1662014966927075], [49.02257161302069, 1.166177166373103], [49.02245352023138, 1.1656337630690246], [49.022437445162325, 1.1656405042886888], [49.022426996364516, 1.1656043468427697], [49.022398864975145, 1.1656178292805635], [49.02238404514782, 1.1655492097614228], [49.022334368899465, 1.1655721652720388], [49.02222307956481, 1.1650689440662916], [49.0222708651695, 1.1650441113041552], [49.02224223509796, 1.16490950361748]],
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 2'
         }
-    ).bindPopup('<h3>bâtiment 2</h3><a href="lien_vers_la_page.html">info bâtiment 2 ici</a>').openPopup();
+    ).bindPopup('<h3>bâtiment 2</h3>').openPopup();
 
     var gymnase = L.polygon(
         [[49.0218600211779, 1.1676084714506487], [49.02178446165584, 1.1676467154701982], [49.021776644199065, 1.167599776105476], [49.02156919710501, 1.167653917306069], [49.02156511809895, 1.167637483832067], [49.021516304154744, 1.1676613016987858], [49.021525472811675, 1.1677148802225474], [49.0215015502113, 1.1677278319088202], [49.02151094665774, 1.167768636544622], [49.0215889671384, 1.1681423103010502], [49.021938376912374, 1.1679643586398072], [49.0218600211779, 1.1676084714506487]],
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Gymnase'
         }
-    ).bindPopup('<h3>Gymnase</h3><a href="lien_vers_la_page.html">info gymnase ici</a>').openPopup();
+    ).bindPopup('<h3>Gymnase</h3>').openPopup();
 
     var bat3 = L.polygon(
         [[49.02274707688903, 1.1680018044894496], [49.02188801878887, 1.16843928365671], [49.02200891860579, 1.1689929928272136], [49.02286810395313, 1.1685488205042134], [49.02274707688903, 1.1680018044894496]],
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 3'
         }
-    ).bindPopup('<h3>bâtiment 3</h3><a href="lien_vers_la_page.html">info bâtiment 3 ici</a>').openPopup();
+    ).bindPopup('<h3>bâtiment 3</h3>').openPopup();
 
     var garage = L.polygon(
         [[49.022500215909815, 1.1692686925483997], [49.022561172899714, 1.1695603823431497], [49.022870555165156, 1.1693942382210594], [49.02286290868514, 1.1693521105473792], [49.02288377036268, 1.169340310889936], [49.02287203760969, 1.169278875315996], [49.022850501675265, 1.1692848234960422], [49.022811563938035, 1.1691054219495527], [49.022500215909815, 1.1692686925483997]],
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Atelier mécanique auto'
         }
-    ).bindPopup('<h3>Atelier mécanique auto</h3><a href="lien_vers_la_page.html">info atelier mécanique auto ici</a>').openPopup();
+    ).bindPopup('<h3>Atelier mécanique auto</h3>').openPopup();
 
     var bat4 = L.polygon(
         [[49.02247877451529, 1.169172681502232], [49.0223604109799, 1.169232445422125], [49.022298491721415, 1.1689573240036566], [49.02192344781099, 1.1691526205112552], [49.02209130879811, 1.1699013671409944], [49.022461172051294, 1.1697190444052126], [49.02241877276521, 1.1695208960107095], [49.022473791364035, 1.1694940329915369], [49.02249656142661, 1.1695877278710896], [49.022560586205344, 1.1695513349794453], [49.02247877451529, 1.169172681502232]],
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 4'
         }
-    ).bindPopup('<h3>bâtiment 4</h3><a href="lien_vers_la_page.html">info bat4 ici</a>').openPopup();
+    ).bindPopup('<h3>bâtiment 4</h3>').openPopup();
 
     var bat5 = L.polygon(
         [[49.0212519096132, 1.1644013049587443], [49.021207003683315, 1.164397330732669], [49.02120370873868, 1.164438480760026], [49.020776292116636, 1.1643783120083526], [49.02076765773751, 1.1645032462026563], [49.020772291058364, 1.1645049426438163], [49.02076908513601, 1.164584133011516], [49.02078501650237, 1.1645991433487666], [49.02080231781102, 1.1645803518558466], [49.0208068439762, 1.1645462853350352], [49.02106040205072, 1.1645784554325758], [49.02106229021575, 1.1645715835884403], [49.02107395745213, 1.1645730942485955], [49.02107750933473, 1.164579765894473], [49.02112076195735, 1.1645968622321448], [49.021121519572546, 1.1645806265663339], [49.02113104036175, 1.1645818478580168], [49.02113041403234, 1.1646063790422545], [49.02123738893013, 1.1646197633146187], [49.0212519096132, 1.1644013049587443]],
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 5'
         }
-    ).bindPopup('<h3>bâtiment 5</h3><a href="lien_vers_la_page.html">info bat5 ici</a>').openPopup();
+    ).bindPopup('<h3>bâtiment 5</h3>').openPopup();
 
     var bat6 = L.polygon(
         [[49.0209526529425, 1.1637546209822744], [49.02091068445688, 1.1637493172970323], [49.02090628466536, 1.163781134445344], [49.02055339124291, 1.1637354778321765], [49.02055242338756, 1.1637099350197104], [49.020493914460815, 1.163703084561746], [49.020494561290974, 1.1637236053516915], [49.02047572200982, 1.1637270815766954], [49.02046807683567, 1.1638500929918791], [49.02083681562692, 1.1639016455517321], [49.02083367047072, 1.1639558942127337], [49.02094029193745, 1.1639702057053682], [49.020942304176174, 1.163933491412962], [49.02096235344726, 1.1639373029961746], [49.020986015013676, 1.1638271414294081], [49.02096672350763, 1.1638248067650636], [49.02097328023399, 1.1637924746411272], [49.02095241357176, 1.1637892180711162], [49.0209526529425, 1.1637546209822744]],
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
     info.push(L.marker([49.02233695649969, 1.1691771346988213], {dataName: 'BDE : bureau des entreprises [RDC]'}).bindPopup('<h3>Vie Scolaire / CPE / PsyEN [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/info.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de sport-
-    //sport.push(L.marker([49.02373449920583, 1.151], {dataName: 'Terrain de basket extérieur'}).bindPopup('<a href="https://urlicilaaaa">text description url la</a>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
+    //sport.push(L.marker([49.02373449920583, 1.151], {dataName: 'Terrain de basket extérieur'}).bindPopup('<h3>Terrain de basket extérieur</h3>').setIcon(new L.Icon({iconUrl: 'icon/sport.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de sport "Polygones"-
     var terrain_basket_hand = L.polygon(
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Terrain de Basket/Hand'
         }
-    ).bindPopup('<h3>Terrain de Basket/Hand</h3><a href="lien_vers_la_page.html">info terrain ici</a>').openPopup();    
+    ).bindPopup('<h3>Terrain de Basket/Hand</h3>').openPopup();    
 
     var terrain_petanque = L.polygon(
         [[49.02161916494899, 1.1649667409110407], [49.02145778877596, 1.1650478383689915], [49.02152343328356, 1.1653424174972429], [49.021685698576874, 1.1652546752915214], [49.02161916494899, 1.1649667409110407]],
@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Terrain de Pétanque'
         }
-    ).bindPopup('<h3>Terrain de Pétanque</h3><a href="lien_vers_la_page.html">info terrain ici</a>').openPopup();
+    ).bindPopup('<h3>Terrain de Pétanque</h3>').openPopup();
 
     var piste_athletisme = L.polygon(
         [[49.02167426368425, 1.1652855296861446], [49.021612293993485, 1.165318599608014], [49.02166904003866, 1.165545808951265], [49.021626301119284, 1.1655131704182509], [49.021548341042745, 1.165462620258296], [49.02148418661483, 1.1654462747304422], [49.021403202957345, 1.1654478546965379], [49.02127481824141, 1.1655233307462254], [49.021208442386694, 1.1656238386233895], [49.02117096934879, 1.1657010673809793], [49.02116236533237, 1.1656655739975577], [49.02105250918339, 1.1657149358942434], [49.0214301705779, 1.167398410902365], [49.021570881861834, 1.1673252820707773], [49.02167130419133, 1.1673505687647037], [49.02179185058006, 1.1673039057777146], [49.02187117487253, 1.1672325043900287], [49.02194700595035, 1.1670902274037473], [49.02198934561346, 1.166933790778387], [49.02198659679513, 1.166757840528021], [49.021950915648375, 1.1665626964829698], [49.02185466477354, 1.166119417610048], [49.02177908738116, 1.1657870704240452], [49.02172091602648, 1.1655236764885615], [49.02160330689841, 1.1655949765596176], [49.02167930851789, 1.1656966979097092], [49.02174889582142, 1.1659061813290919], [49.02184705082064, 1.1663608454920507], [49.021934624445066, 1.166787607107949], [49.0218988412353, 1.1670299321795596], [49.02176565293033, 1.1672341635356815], [49.02158779228711, 1.1672482416899754], [49.021421855075346, 1.1670580092571186], [49.02118851341916, 1.1660629674193501], [49.02119909135217, 1.1658049089075178], [49.02130384783359, 1.1656128206156495], [49.02145756875558, 1.1655330826466752], [49.02158147496087, 1.1655708699302068], [49.021603285523156, 1.1655936745018778], [49.021720446865174, 1.1655238944099438], [49.021692235498875, 1.165380688074947], [49.02167426368425, 1.1652855296861446]],
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Piste d\'athlétisme'
         }
-    ).bindPopup('<h3>Piste d\'athlétisme</h3><a href="lien_vers_la_page.html">info piste ici</a>').openPopup();
+    ).bindPopup('<h3>Piste d\'athlétisme</h3>').openPopup();
 
     var terrain_sportif = L.polygon(
         [[49.02164065662015, 1.1656434618595028], [49.02119621536832, 1.1658580827632932], [49.02120175824237, 1.1660923663864935], [49.02141566047183, 1.1670248504097742], [49.021507790533576, 1.1671774707273244], [49.0215834039858, 1.1672300905970303], [49.021724084875984, 1.1672332313654294], [49.02185483969575, 1.1671135741772218], [49.021923131436154, 1.1669072696002445], [49.02192421907216, 1.1667254063157486], [49.021707195908306, 1.1657645197563795], [49.02164065662015, 1.1656434618595028]],
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Terrain sportif'
         }
-    ).bindPopup('<h3>Terrain sportif</h3><a href="lien_vers_la_page.html">info terrain ici</a>').openPopup();    
+    ).bindPopup('<h3>Terrain sportif</h3>').openPopup();    
     
    sportPolygons.push(terrain_basket_hand, terrain_petanque, piste_athletisme, terrain_sportif);
 
@@ -360,20 +360,20 @@ document.addEventListener("DOMContentLoaded", function () {
     toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat6 mixte [RDC]'}).bindPopup('<h3>Toilettes bat6 mixte [RDC]</h3><a href="#les-fameuxxxx">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux Notables-
-    lieuxNotables.push(L.marker([49.02214916315287, 1.1649138337638885], {dataName: 'Piano'}).bindPopup('<h3>Piano</h3><a href="https://urlicilaaaa">une musique envoutante vous y attend</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02197606944457, 1.165105136912723], {dataName: 'Buisson de la photo de classe'}).bindPopup('<h3>Buisson de la photo de classe</h3><a href="https://urlicilaaaa">lieu emblématique du lycée qui nous montre sa beauté une fois par an</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02239888358386, 1.169031051729405], {dataName: 'Allée couverte'}).bindPopup('<h3>Allée couverte</h3><a href="https://urlicilaaaa">petite allée couverte avec un style bien à elle</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02140167737405, 1.1630875097520046], {dataName: 'Statue 1'}).bindPopup('<h3>Statue 1</h3><a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02161022706215, 1.1629848863265104], {dataName: 'Statue 2'}).bindPopup('<h3>Statue 2</h3><a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02151391960788, 1.1644917909650792], {dataName: 'Statue 3'}).bindPopup('<h3>Statue 3</h3><a href="https://urlicilaaaa">bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
-    lieuxNotables.push(L.marker([49.02168298005651, 1.165155125863532], {dataName: 'Drapeaux'}).bindPopup('<h3>Drapeaux</h3><a href="https://urlicilaaaa">Drapeaux aux lycée</a>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02214916315287, 1.1649138337638885], {dataName: 'Piano'}).bindPopup('<h3>Piano une musique envoutante vous y attend</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02197606944457, 1.165105136912723], {dataName: 'Buisson de la photo de classe'}).bindPopup('<h3>Buisson de la photo de classe lieu emblématique du lycée qui nous montre sa beauté une fois par an</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02239888358386, 1.169031051729405], {dataName: 'Allée couverte'}).bindPopup('<h3>Allée couverte petite allée couverte avec un style bien à elle</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02140167737405, 1.1630875097520046], {dataName: 'Statue 1'}).bindPopup('<h3>Statue 1 bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes </h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02161022706215, 1.1629848863265104], {dataName: 'Statue 2'}).bindPopup('<h3>Statue 2 bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes </h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02151391960788, 1.1644917909650792], {dataName: 'Statue 3'}).bindPopup('<h3>Statue 3 bien que moins connues, ces statues ont pourtant été le théâtre de nombreuses théories palpitantes</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
+    lieuxNotables.push(L.marker([49.02168298005651, 1.165155125863532], {dataName: 'Drapeaux'}).bindPopup('<h3>Drapeaux</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
     lieuxNotables.push(L.marker([49.02150165732003, 1.1647406644811722], {dataName: 'Plaque commémorative'}).bindPopup('<h3>Plaque commémorative</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux 3D-
     //lieux3D.push(L.marker([49.02373449920583, 1.151], {dataName: 'vue 3d du hall (c est un exemple !)'}).bindPopup('<a href="https://urlicilaaaa">description iciiiii</a>').setIcon(new L.Icon({iconUrl: 'icon/3d.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de Markers personnels- (pour debug c'est ici en gros)
-    markersPersonnels.push(L.marker([0, 0], {dataName: 'debug point'}).bindPopup('<h3>debug point</h3><a href="https://urlicilaaaa">point de debug</a>').setIcon(new L.Icon({iconUrl: 'icon/location_point.png', iconSize: [tailleIcon, tailleIcon]})));
+    markersPersonnels.push(L.marker([0, 0], {dataName: 'debug point'}).bindPopup('<h3>debug point</h3>').setIcon(new L.Icon({iconUrl: 'icon/location_point.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de markers Personnels "Polygones"- (pour debug c'est ici aussi)
     var debugpolygon1 = L.polygon(
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'Polygone debug'
         }
-    ).bindPopup('<h3>Polygone debug</h3><a href="lien_vers_la_page.html">polygon de debug</a>').openPopup();
+    ).bindPopup('<h3>Polygone debug</h3>').openPopup();
 
     markersPersonnelsPolygons.push(debugpolygon1);
 
