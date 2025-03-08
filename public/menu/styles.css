@@ -8,7 +8,7 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     overflow: hidden;
-    flex-direction: column; /* Ajouter pour une disposition verticale sur mobile */
+    flex-direction: column; /* Disposition verticale */
 }
 
 #intro {
@@ -23,6 +23,8 @@ body {
     background-color: #f0f0f0;
     z-index: 10;
     transition: opacity 1s ease-in-out;
+    display: flex; /* Toujours afficher l'élément intro */
+    flex-direction: column; /* Assure que les crédits restent visibles */
 }
 
 #intro.hidden {
@@ -35,23 +37,24 @@ body {
     margin: 0;
     animation: fadeIn 2s ease-in-out;
     color: #333;
+    z-index: 5; /* Permet aux crédits d'être visibles par-dessus */
 }
 
 #credits {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     font-size: 16px;
     color: white;
-    z-index: 20;
-    text-align: right; /* Aligné à droite sur PC */
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour une meilleure lisibilité */
+    z-index: 15; /* Crédits toujours visibles au-dessus de l'intro */
+    text-align: left; /* Aligné à gauche */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour lisibilité */
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 #credits a {
-    color: #ffcc00; /* Couleur du lien pour le rendre plus visible */
+    color: #ffcc00; /* Lien visible */
     text-decoration: none;
 }
 
@@ -118,6 +121,7 @@ body {
         font-size: 14px; /* Réduit la taille du texte des crédits */
         padding: 5px 10px;
         text-align: left; /* Aligner à gauche sur mobile */
+        background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour meilleure lisibilité */
     }
 
     #credits a {
