@@ -599,7 +599,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Ajouter les informations de version et de date de mise à jour
     const version = '0.1.6';
-    const updateTimestamp = 1741310853; // Timestamp à modifier manuellement
+    const updateTimestamp = 1741421291; // Timestamp à modifier manuellement
     const updateDate = new Date(updateTimestamp * 1000).toLocaleDateString('fr-FR', {
         year: 'numeric',
         month: 'long',
