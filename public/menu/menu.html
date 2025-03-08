@@ -8,7 +8,12 @@
 
             window.onload = function() {
                 if (isMobile()) {
-                    window.location.href = "../carte-lml/index.html";
+                    // Afficher l'animation pour mobile
+                    document.getElementById('intro').classList.remove('hidden');
+                    setTimeout(function() {
+                        // Après l'animation, rediriger vers la carte interactive
+                        window.location.href = "../carte-lml/index.html";
+                    }, 2000); // 2 secondes, ajustez si nécessaire
                 } else {
                     setTimeout(function() {
                         document.getElementById('intro').classList.add('hidden');
