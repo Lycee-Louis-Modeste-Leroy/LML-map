@@ -8,6 +8,7 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    flex-direction: column; /* Ajouter pour une disposition verticale sur mobile */
 }
 
 #intro {
@@ -42,6 +43,20 @@ body {
     right: 20px;
     font-size: 16px;
     color: white;
+    z-index: 20;
+    text-align: right; /* Aligné à droite sur PC */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour une meilleure lisibilité */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#credits a {
+    color: #ffcc00; /* Couleur du lien pour le rendre plus visible */
+    text-decoration: none;
+}
+
+#credits a:hover {
+    text-decoration: underline;
 }
 
 #menu {
@@ -82,4 +97,30 @@ body {
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design pour mobile */
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start; /* Garde tout en haut pour mobile */
+        height: 100vh;
+    }
+
+    #intro h1 {
+        font-size: 36px; /* Taille réduite pour mobile */
+    }
+
+    #credits {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px; /* Réduit la taille du texte des crédits */
+        padding: 5px 10px;
+        text-align: left; /* Aligner à gauche sur mobile */
+    }
+
+    #credits a {
+        font-size: 14px; /* Plus petit sur mobile */
+    }
 }
