@@ -11,3 +11,7 @@ Pour utiliser la carte interactive, il vous suffit d'ouvrir le fichier `index.ht
 ## Licence
 
 Ce projet est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
+
+## Problémes connus:
+
+fichier 3d > 100mb imposible à ouvrir sur github pages
