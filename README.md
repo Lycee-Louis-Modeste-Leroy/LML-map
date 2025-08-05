@@ -6,7 +6,7 @@ L'objectif de ce projet est de créer une carte interactive permettant de décou
 
 ## Utilisation
 
-Pour utiliser la carte interactive, il vous suffit d'ouvrir le fichier `index.html` dans votre navigateur. Vous pouvez alors explorer la carte interactive et découvrir les différents lieux d'Evreux.
+Pour utiliser la carte interactive, il vous suffit d'ouvrir le fichier `index.html` dans votre navigateur. Vous pouvez alors explorer la carte interactive et découvrir les différents lieux du lycée Louis Modeste Leroy.
 
 ## Licence
 
