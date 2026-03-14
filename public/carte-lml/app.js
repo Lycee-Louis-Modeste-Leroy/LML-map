@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dataName: 'bâtiment 1'
         }
     ).bindPopup(`
-        <h3>Bâtiment 1</h3>
+        <h3>Bâtiment A</h3>
         <p>
             <strong>- RDC :</strong> salles banalisées<br>
             <strong>- 1er :</strong> salles de sciences
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 2'
         }
-    ).bindPopup('<h3>bâtiment 2</h3>').openPopup();
+    ).bindPopup('<h3>bâtiment B</h3>').openPopup();
 
     var gymnase = L.polygon(
         [[49.0218600211779, 1.1676084714506487], [49.02178446165584, 1.1676467154701982], [49.021776644199065, 1.167599776105476], [49.02156919710501, 1.167653917306069], [49.02156511809895, 1.167637483832067], [49.021516304154744, 1.1676613016987858], [49.021525472811675, 1.1677148802225474], [49.0215015502113, 1.1677278319088202], [49.02151094665774, 1.167768636544622], [49.0215889671384, 1.1681423103010502], [49.021938376912374, 1.1679643586398072], [49.0218600211779, 1.1676084714506487]],
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 3'
         }
-    ).bindPopup('<h3>bâtiment 3</h3>').openPopup();
+    ).bindPopup('<h3>bâtiment C</h3>').openPopup();
 
     var garage = L.polygon(
         [[49.022500215909815, 1.1692686925483997], [49.022561172899714, 1.1695603823431497], [49.022870555165156, 1.1693942382210594], [49.02286290868514, 1.1693521105473792], [49.02288377036268, 1.169340310889936], [49.02287203760969, 1.169278875315996], [49.022850501675265, 1.1692848234960422], [49.022811563938035, 1.1691054219495527], [49.022500215909815, 1.1692686925483997]],
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 4'
         }
-    ).bindPopup('<h3>bâtiment 4</h3>').openPopup();
+    ).bindPopup('<h3>bâtiment D</h3>').openPopup();
 
     var bat5 = L.polygon(
         [[49.0212519096132, 1.1644013049587443], [49.021207003683315, 1.164397330732669], [49.02120370873868, 1.164438480760026], [49.020776292116636, 1.1643783120083526], [49.02076765773751, 1.1645032462026563], [49.020772291058364, 1.1645049426438163], [49.02076908513601, 1.164584133011516], [49.02078501650237, 1.1645991433487666], [49.02080231781102, 1.1645803518558466], [49.0208068439762, 1.1645462853350352], [49.02106040205072, 1.1645784554325758], [49.02106229021575, 1.1645715835884403], [49.02107395745213, 1.1645730942485955], [49.02107750933473, 1.164579765894473], [49.02112076195735, 1.1645968622321448], [49.021121519572546, 1.1645806265663339], [49.02113104036175, 1.1645818478580168], [49.02113041403234, 1.1646063790422545], [49.02123738893013, 1.1646197633146187], [49.0212519096132, 1.1644013049587443]],
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
             weight: 2,
             dataName: 'bâtiment 5'
         }
-    ).bindPopup('<h3>bâtiment 5</h3>').openPopup();
+    ).bindPopup('<h3>bâtiment E</h3>').openPopup();
 
     var bat6 = L.polygon(
         [[49.0209526529425, 1.1637546209822744], [49.02091068445688, 1.1637493172970323], [49.02090628466536, 1.163781134445344], [49.02055339124291, 1.1637354778321765], [49.02055242338756, 1.1637099350197104], [49.020493914460815, 1.163703084561746], [49.020494561290974, 1.1637236053516915], [49.02047572200982, 1.1637270815766954], [49.02046807683567, 1.1638500929918791], [49.02083681562692, 1.1639016455517321], [49.02083367047072, 1.1639558942127337], [49.02094029193745, 1.1639702057053682], [49.020942304176174, 1.163933491412962], [49.02096235344726, 1.1639373029961746], [49.020986015013676, 1.1638271414294081], [49.02096672350763, 1.1638248067650636], [49.02097328023399, 1.1637924746411272], [49.02095241357176, 1.1637892180711162], [49.0209526529425, 1.1637546209822744]],
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dataName: 'bâtiment 6'
         }
     ).bindPopup(`
-        <h3>Bâtiment 6</h3>
+        <h3>Bâtiment F</h3>
         <p>
             <strong>- RDC :</strong> infirmerie<br>
             <strong>- 1er :</strong> salle d'examen<br>
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dataName: 'bâtiment 7'
         }
     ).bindPopup(`
-        <h3>Bâtiment 7</h3>
+        <h3>Bâtiment G</h3>
         <p>
             <strong>- RDC :</strong> foyer des internes<br>
             <strong>- 2ème et 3ème :</strong> internat
@@ -349,15 +349,15 @@ document.addEventListener("DOMContentLoaded", function () {
     toilettes.push(L.marker([49.02218659042677, 1.1648641473212509], {dataName: 'Toilettes hall mixte [RDC]'}).bindPopup('<h3>Toilettes hall mixte [RDC]</h3><a href="#FE!N-www.youtube.com/watch?v=B9synWjqBn8">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.021551295355884, 1.1634032226756539], {dataName: 'Toilettes foyer mixte (si adhésion MDL) [RDC]'}).bindPopup('<h3>Toilettes foyer mixte (si adhésion MDL) [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02173308197326, 1.1640841305287053], {dataName: 'Toilettes cantine homme/femme [RDC]'}).bindPopup('<h3>Toilettes cantine homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.022316164563854, 1.1655779661759897], {dataName: 'Toilettes bat1 mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bat1 mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.02246388966964, 1.1662661710142048], {dataName: 'Toilettes bat1 mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bat1 mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.022617628561875, 1.1668610504435677], {dataName: 'Toilettes bat1 mixte [RDC]'}).bindPopup('<h3>Toilettes bat1 mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022316164563854, 1.1655779661759897], {dataName: 'Toilettes bat1 mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bat A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02246388966964, 1.1662661710142048], {dataName: 'Toilettes bat1 mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bat A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022617628561875, 1.1668610504435677], {dataName: 'Toilettes bat1 mixte [RDC]'}).bindPopup('<h3>Toilettes bat A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02165235546742, 1.1678756686463967], {dataName: 'Toilettes gymnase homme/femme [RDC]'}).bindPopup('<h3>Toilettes gymnase homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.0225792690205, 1.168433415405338], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat3 homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.02235877682576, 1.1686614042554015], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat3 homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.02232106218221, 1.169383441735178], {dataName: 'Toilettes bat4 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat4 homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.021185560536914, 1.1644888886861064], {dataName: 'Toilettes bat5 homme/femme [RDC, 1er & 2ème]'}).bindPopup('<h3>Toilettes bat5 homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat6 mixte [RDC]'}).bindPopup('<h3>Toilettes bat6 mixte [RDC]</h3><a href="#les-fameuxxxx">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.0225792690205, 1.168433415405338], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat C homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02235877682576, 1.1686614042554015], {dataName: 'Toilettes bat3 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat C homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02232106218221, 1.169383441735178], {dataName: 'Toilettes bat4 homme/femme [RDC]'}).bindPopup('<h3>Toilettes bat D homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.021185560536914, 1.1644888886861064], {dataName: 'Toilettes bat5 homme/femme [RDC, 1er & 2ème]'}).bindPopup('<h3>Toilettes bat E homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat6 mixte [RDC]'}).bindPopup('<h3>Toilettes bat F mixte [RDC]</h3><a href="#les-fameuxxxx">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux Notables-
     lieuxNotables.push(L.marker([49.02214916315287, 1.1649138337638885], {dataName: 'Piano'}).bindPopup('<h3>Piano une musique envoutante vous y attend</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
