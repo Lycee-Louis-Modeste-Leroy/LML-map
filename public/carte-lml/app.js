@@ -260,9 +260,9 @@ document.addEventListener("DOMContentLoaded", function () {
             fillColor: "#ff6666",
             fillOpacity: 0.2,
             weight: 2,
-            dataName: 'Greta'
+            dataName: 'GRETA'
         }
-    ).bindPopup('<h3>Greta</h3><a href="https://greta.ac-normandie.fr/greta/greta-portes-normandes/">information sur le Greta cliquez ici</a>').openPopup();   
+    ).bindPopup('<h3>GRETA</h3><a href="https://greta.ac-normandie.fr/greta/greta-portes-normandes/">information sur le GRETA cliquez ici</a>').openPopup();   
 
     BatimentsPolygons.push(foyer, cantine, administration, hall, bat1, bat2, gymnase, bat3, garage, bat4, bat5, bat6, bat7, Greta);
 
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toilettes.push(L.marker([49.02218659042677, 1.1648641473212509], {dataName: 'Toilettes hall mixte [RDC]'}).bindPopup('<h3>Toilettes hall mixte [RDC]</h3><a href="#FE!N-www.youtube.com/watch?v=B9synWjqBn8">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.021551295355884, 1.1634032226756539], {dataName: 'Toilettes foyer mixte (si adhésion MDL) [RDC]'}).bindPopup('<h3>Toilettes foyer mixte (si adhésion MDL) [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02173308197326, 1.1640841305287053], {dataName: 'Toilettes cantine homme/femme [RDC]'}).bindPopup('<h3>Toilettes cantine homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.022316164563854, 1.1655779661759897], {dataName: 'Toilettes bat A mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bât A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.022316164563854, 1.1655779661759897], {dataName: 'Toilettes bât A mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bât A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02246388966964, 1.1662661710142048], {dataName: 'Toilettes bât A mixte [RDC & 1er]'}).bindPopup('<h3>Toilettes bât A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.022617628561875, 1.1668610504435677], {dataName: 'Toilettes bât A mixte [RDC]'}).bindPopup('<h3>Toilettes bât A mixte [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02165235546742, 1.1678756686463967], {dataName: 'Toilettes gymnase homme/femme [RDC]'}).bindPopup('<h3>Toilettes gymnase homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toilettes.push(L.marker([49.02235877682576, 1.1686614042554015], {dataName: 'Toilettes bât C homme/femme [RDC]'}).bindPopup('<h3>Toilettes bât C homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.02232106218221, 1.169383441735178], {dataName: 'Toilettes bât D homme/femme [RDC]'}).bindPopup('<h3>Toilettes bât D homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
     toilettes.push(L.marker([49.021185560536914, 1.1644888886861064], {dataName: 'Toilettes bât E homme/femme [RDC, 1er & 2ème]'}).bindPopup('<h3>Toilettes bât E homme/femme [RDC]</h3>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
-    toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bat F mixte [RDC]'}).bindPopup('<h3>Toilettes bât F mixte [RDC]</h3><a href="#les-fameuxxxx">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
+    toilettes.push(L.marker([49.02081033073713, 1.163835655728059], {dataName: 'Toilettes bât F mixte [RDC]'}).bindPopup('<h3>Toilettes bât F mixte [RDC]</h3><a href="#les-fameuxxxx">.</a>').setIcon(new L.Icon({iconUrl: 'icon/toilettes.png', iconSize: [tailleIcon, tailleIcon]})));
 
     // -markers de lieux Notables-
     lieuxNotables.push(L.marker([49.02214916315287, 1.1649138337638885], {dataName: 'Piano'}).bindPopup('<h3>Piano une musique envoutante vous y attend</h3>').setIcon(new L.Icon({iconUrl: 'icon/star.png', iconSize: [tailleIcon, tailleIcon]})));
